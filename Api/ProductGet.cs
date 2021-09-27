@@ -17,7 +17,7 @@ namespace Api
 
         [FunctionName("ProductsGet")]
         public async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "products")] HttpRequest req)
+            [HttpTrigger(AuthorizationLevel.User, "get", Route = "products")] HttpRequest req)
         {
             var products = await productData.GetProducts();
             return new OkObjectResult(products);
