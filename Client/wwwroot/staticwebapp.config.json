@@ -32,5 +32,27 @@
 			"route": "/api/*",
 			"allowedRoles": [ "authenticated" ]
 		}
-	]
+	],
+	"auth": {
+		"identityProviders": {
+			"customOpenIdConnectProviders": {
+				"myProvider": {
+					"registration": {
+						"clientIdSettingName": "e41743dc-99b1-48eb-b5de-51d96d6164df",
+						"clientCredential": {
+							"clientSecretSettingName": "mIw7Q~1lKNDvWXxGpp8C49vKtkfZM323s2cat"
+						},
+						"openIdConnectConfiguration": {
+							"wellKnownOpenIdConfiguration": "https://asiloginservice.azurewebsites.net/.well-known/openid-configuration"
+						}
+					},
+					"login": {
+						"nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+						"scopes": [],
+						"loginParameterNames": []
+					}
+				}
+			}
+		}
+	}
 }
